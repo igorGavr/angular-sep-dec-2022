@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
+
 import {CommentService} from '../../services';
 import {IComment} from '../../interfaces';
 
