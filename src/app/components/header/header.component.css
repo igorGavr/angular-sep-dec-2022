@@ -2,9 +2,11 @@
   display: flex;
   justify-content: space-around;
   padding: 0 20%;
+  background-color: darkorange;
+  font-size: 34px;
 
 }
 
 .active{
-  color: red;
+  color: #35f329;
 }
