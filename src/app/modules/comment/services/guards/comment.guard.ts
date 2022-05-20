@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class UserGuard implements CanDeactivate<boolean> , CanActivate{
+export class CommentGuard implements CanDeactivate<boolean>, CanActivate {
   canDeactivate(component: boolean, currentRoute: ActivatedRouteSnapshot,
                 currentState: RouterStateSnapshot, nextState?: RouterStateSnapshot)
     : Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
@@ -16,7 +16,4 @@ export class UserGuard implements CanDeactivate<boolean> , CanActivate{
     : Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     return true;
   }
-
-
-
 }

@@ -19,7 +19,7 @@ export class UserService {
       .get<IUser[]>(urls.users)
       .pipe(
         map(value => value),
-        catchError(err => throwError('erora'))
+        catchError(err => throwError('erora  users'))
       )
   }
 

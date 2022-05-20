@@ -16,9 +16,7 @@ export class PostDetailsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe(({id}) => {
-      this.postService.getById(id).subscribe(value => this.post = value)
-    })
+    this.activatedRoute.data.subscribe(({postData}) => this.post = postData)
   }
 
 }

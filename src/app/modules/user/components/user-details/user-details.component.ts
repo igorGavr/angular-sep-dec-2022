@@ -12,7 +12,7 @@ import {UserService} from '../../services';
 export class UserDetailsComponent implements OnInit {
   user: IUser;
 
-  constructor(private activatedRoute: ActivatedRoute, private userService: UserService) {
+  constructor(private activatedRoute: ActivatedRoute) {
   }
 
   ngOnInit(): void {
