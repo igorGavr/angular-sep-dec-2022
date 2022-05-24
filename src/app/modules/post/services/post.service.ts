@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {Observable, throwError} from 'rxjs';
+import {delay, Observable, throwError} from 'rxjs';
 
 import {urls} from '../../../contants';
 import {IPost} from '../interfaces';
@@ -24,6 +24,6 @@ export class PostService {
   }
 
   getById(id: string): Observable<IPost> {
-    return this.httpClient.get<IPost>(`${urls.posts}/${id}`)
+    return this.httpClient.get<IPost>(`${urls.posts}/${id}`).pipe(delay(1000))
   }
 }

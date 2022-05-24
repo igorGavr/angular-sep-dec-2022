@@ -14,7 +14,8 @@ import {PostService} from "../post.service";
 export class PostsResolver implements Resolve<IPost[]> {
   constructor(private postService: PostService) {
   }
-  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<IPost[]> | Promise<IPost[]> | IPost[] {
+  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot)
+    : Observable<IPost[]> | Promise<IPost[]> | IPost[] {
     return this.postService.getAll();
   }
 

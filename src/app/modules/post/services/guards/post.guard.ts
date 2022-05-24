@@ -7,10 +7,10 @@ import { Observable } from 'rxjs';
 })
 export class PostGuard implements CanDeactivate<boolean>, CanActivate {
   canDeactivate(component: boolean, currentRoute: ActivatedRouteSnapshot, currentState: RouterStateSnapshot, nextState?: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return confirm('leave?');
+    return true;
   }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return confirm('go?');
+    return true;
   }
 }

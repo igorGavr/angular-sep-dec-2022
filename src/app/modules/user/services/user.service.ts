@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {Observable, throwError} from 'rxjs';
+import {delay, Observable, throwError} from 'rxjs';
 import {catchError, map} from "rxjs/operators";
 
 import {IUser} from '../interfaces';
@@ -24,6 +24,6 @@ export class UserService {
   }
 
   getById(id: string): Observable<IUser> {
-    return this.httpClient.get<IUser>(`${urls.users}/${id}`)
+    return this.httpClient.get<IUser>(`${urls.users}/${id}`).pipe(delay(2000))
   }
 }
