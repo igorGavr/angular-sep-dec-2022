@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 
 import {IUser} from '../../interfaces';
-import {UserService} from '../../services';
 
 @Component({
   selector: 'app-user-details',
@@ -18,5 +17,4 @@ export class UserDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.data.subscribe(({userData}) => this.user = userData)
   }
-
 }

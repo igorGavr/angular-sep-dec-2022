@@ -16,7 +16,8 @@ export class UsersResolver implements Resolve<IUser[]> {
 
   constructor(private userService: UserService) {
   }
-  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<IUser[]> | Promise<IUser[]> | IUser[] {
+  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot)
+    : Observable<IUser[]> | Promise<IUser[]> | IUser[] {
     return this.userService.getAll();
   }
 }
